@@ -1,1 +1,1 @@
-Tailwind CSS template
+Tailwind CSS dropdown open and close on click not hover and have animated caret icon
