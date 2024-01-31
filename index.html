@@ -11,11 +11,10 @@
 </head>
 
 <body>
-   <nav class="relative bg-indigo-600 px-6 py-3 text-white">
+   <nav class="bg-indigo-600 px-6 py-3 text-white">
       <div class="container mx-auto flex flex-wrap items-center">
          <a href="#" class="mr-12 text-3xl">LOGO</a>
-         <button class="group peer relative ml-auto flex h-4 w-6 flex-col justify-between md:hidden"
-            onclick="$(this).toggleClass('cross')">
+         <button class="group relative ml-auto flex h-4 w-6 flex-col justify-between md:hidden" id="navbar-toggler">
             <div
                class="h-0.5 w-full bg-white transition-all duration-300 group-[.cross]:absolute group-[.cross]:top-1/2 group-[.cross]:-rotate-45">
             </div>
@@ -24,7 +23,7 @@
                class="h-0.5 w-full bg-white transition-all duration-300 group-[.cross]:absolute group-[.cross]:top-1/2 group-[.cross]:rotate-45">
             </div>
          </button>
-         <ul class="absolute -left-full top-full w-full bg-indigo-600 pb-2 transition-all duration-300 peer-[.cross]:left-0 md:static md:flex md:w-auto md:grow md:items-center md:pb-0">
+         <ul class="w-full bg-indigo-600 mt-3 hidden md:flex md:w-auto md:grow md:items-center md:mt-0" id="navbar-content">
             <li><a href="#" class="navbar-item active">Home</a></li>
             <li><a href="#" class="navbar-item">About</a></li>
             <li><a href="#" class="navbar-item">Contact</a></li>
@@ -32,6 +31,15 @@
          </ul>
       </div>
    </nav>
+
+   <script>
+      $(document).ready(function () {
+         $('#navbar-toggler').click(function(){
+            $(this).toggleClass('cross');
+            $('#navbar-content').slideToggle();
+         });
+      });
+   </script>
 </body>
 
 </html>
