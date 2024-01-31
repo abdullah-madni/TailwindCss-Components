@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.css" />
+   <script src="js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+   <nav class="relative bg-indigo-600 px-6 py-3 text-white">
+      <div class="container mx-auto flex flex-wrap items-center">
+         <a href="#" class="mr-12 text-3xl">LOGO</a>
+         <button class="group peer relative ml-auto flex h-4 w-6 flex-col justify-between md:hidden"
+            onclick="$(this).toggleClass('cross')">
+            <div
+               class="h-0.5 w-full bg-white transition-all duration-300 group-[.cross]:absolute group-[.cross]:top-1/2 group-[.cross]:-rotate-45">
+            </div>
+            <div class="h-0.5 w-full bg-white group-[.cross]:hidden"></div>
+            <div
+               class="h-0.5 w-full bg-white transition-all duration-300 group-[.cross]:absolute group-[.cross]:top-1/2 group-[.cross]:rotate-45">
+            </div>
+         </button>
+         <ul class="absolute -left-full top-full w-full bg-indigo-600 pb-2 transition-all duration-300 peer-[.cross]:left-0 md:static md:flex md:w-auto md:grow md:items-center md:pb-0">
+            <li><a href="#" class="navbar-item active">Home</a></li>
+            <li><a href="#" class="navbar-item">About</a></li>
+            <li><a href="#" class="navbar-item">Contact</a></li>
+            <li class="md:ml-auto"><a href="#" class="navbar-item">Blog</a></li>
+         </ul>
+      </div>
+   </nav>
+</body>
+
+</html>

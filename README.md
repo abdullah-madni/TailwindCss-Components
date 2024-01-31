@@ -1,0 +1,1 @@
+Tailwind CSS navbar that slide from left side on small screen and have animated toggle button
