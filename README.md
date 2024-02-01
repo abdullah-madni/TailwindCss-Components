@@ -1,1 +1,1 @@
-Tailwind CSS template
+Tailwind CSS Modal box
